@@ -1,27 +1,13 @@
 import { Router } from "express";
-import { StatusCodes } from "http-status-codes"
+import { StatusCodes } from "http-status-codes";
+import { CidadesController } from "./../controllers";
 
-const router = Router()
+const router = Router();
 
 router.get("/", (req, res) => {
-    return res.send("Olá Dev");
+  return res.send("Olá Dev");
 });
 
-router.post("/teste", (req, res) => {
-    console.log(req.body)
+router.post("/cidades", CidadesController.create);
 
-    return res.status(StatusCodes.ACCEPTED).json(req.body)
-})
-
-const api = [
-    {id: 1, nome: "Javascript"},
-    {id: 2, nome: "Typescript"},
-    {id: 3, nome: "NodeJs"}
-]
-router.get("/api", (_, res) => {
-    return res.send(
-        api
-    )
-})
-
-export { router }
+export { router };

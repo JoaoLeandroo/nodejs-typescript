@@ -21,3 +21,6 @@ rootDir -> apontar a pasta de saída dos arquivos ts
 outDir -> Apontar aonde os arquvios ts vão ser compilados para js
 
 Para compilar, basta utilizar o comando yarn tsc
+
+biblioteca para fazer validações
+yarn add yup 
